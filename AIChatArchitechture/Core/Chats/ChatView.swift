@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        NavigationStack
-        {
+        NavigationStack {
             Text("Chats")
                 .navigationTitle("Chats")
         }

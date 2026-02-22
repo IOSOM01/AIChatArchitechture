@@ -22,7 +22,7 @@ struct ProfileView: View {
                 }
           }
         .sheet(isPresented: $showSettingView) {
-            Text("SettinView")
+           SettingView()
         }
       }
     
@@ -36,6 +36,7 @@ struct ProfileView: View {
     }
     
     private func onSettingButtonPressed() {
+        
         showSettingView = true
     }
 }

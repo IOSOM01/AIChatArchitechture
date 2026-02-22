@@ -12,23 +12,27 @@ import SwiftUI
 
 struct AppView: View {
     
-    @AppStorage("showTabbarView") var showTabBar: Bool = false
+   
+    @State var appState: AppState = AppState()
     
     var body: some View {
         
-        AppVieBuilder(showTabBar: showTabBar,
+        AppVieBuilder(showTabBar: appState.showTabbar,
         tabbarView: {
            TabBarView()
         }, onboardView: {
             WelcomeView()
-        })
+        }
+        )
+        .environment(appState)
+        
     }
 }
 
-#Preview("AppView - Tabbar") {
-    AppView(showTabBar: true)
-}
-
-#Preview("AppView - Obnarding") {
-    AppView(showTabBar: false)
-}
+//#Preview("AppView - Tabbar") {
+//    AppView(showTabBar: AppState(showTabbar: true))
+//}
+//
+//#Preview("AppView - Obnarding") {
+//    AppView(showTabBar: AppState(showTabbar: false))
+//}
