@@ -31,6 +31,7 @@ struct OnboardingIntroView: View {
             .baselineOffset(6)
             .frame(maxHeight:.infinity)
             .padding(24)
+            .toolbarVisibility(.hidden, for: .navigationBar)
           
             NavigationLink {
                 OnboardingColorView()
